@@ -1,0 +1,29 @@
+name: Run App Checks
+
+on:
+  pull_request:
+    types: [opened, reopened, edited, synchronize]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install packages
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Prettier Check
+        run: npm run prettier
+
+      - name: TS Check
+        run: npm run tsc
+
+      - uses: reviewdog/action-setup@v1
+        with:
+          reviewdog_version: latest
+
+      - name: Reviewdog Check
+        run: reviewdog -version

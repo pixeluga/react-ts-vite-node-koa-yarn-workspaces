@@ -1,0 +1,23 @@
+{
+  "version": "2.0.2",
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "lib": ["es2017"],
+    "outDir": "dist",
+    // "rootDir": "src",
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+  },
+  "include": [
+    "src/**/*",
+    "**/*.ts",
+    "types/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
