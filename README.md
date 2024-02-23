@@ -26,6 +26,24 @@ This will start a development server for you.
 Use linter to format the code:
 
 ```bash
+yarn lint:client
+yarn yarn lint:fix:client
+
+yarn prettier:client
+yarn format:client
+```
+
+```bash
+yarn lint:server
+yarn yarn lint:fix:server
+
+yarn prettier:server
+yarn format:server
+```
+
+Or directly in `client` or `server` folders:
+
+```bash
 cd client or cd server
 
 yarn lint

@@ -9,7 +9,17 @@
     "server"
   ],
   "scripts": {
-    "start": "concurrently \"yarn workspace server start\" \"yarn workspace client dev"
+    "start": "concurrently \"yarn workspace server start\" \"yarn workspace client dev",
+    "tsc:client": "cd client && yarn tsc",
+    "lint:client": "cd client && yarn lint",
+    "lint:fix:client": "cd client && yarn lint:fix",
+    "prettier:client": "cd client && yarn prettier",
+    "format:client": "cd client && yarn format",
+    "tsc:server": "cd server && yarn tsc",
+    "lint:server": "cd server && yarn lint",
+    "lint:fix:server": "cd server && yarn lint:fix",
+    "prettier:server": "cd server && yarn prettier",
+    "format:server": "cd server && yarn format"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

@@ -1,29 +1,14 @@
-import { useEffect, useState } from 'react'
-import viteLogo from '/vite.svg'
-import { fetchTest } from './api'
+import { BrowserRouter as Router } from 'react-router-dom'
+import ErrorBoundary from 'src/components/ErrorBoundary'
+import Routes from 'src/routes'
 
-type Data = {
-  name: string
-}
 function App() {
-  const [data, setData] = useState<Data>({ name: '' })
-
-  useEffect(() => {
-    fetchTest().then((resp) => {
-      setData(resp)
-      console.log('resp', resp)
-    })
-  }, [])
-
   return (
-    <>
-      <div>
-        <img src={viteLogo} className="logo" alt="Vite logo" />
-      </div>
-
-      <h1>Vite + React + TS</h1>
-      <p>User: {data.name}</p>
-    </>
+    <ErrorBoundary>
+      <Router>
+        <Routes />
+      </Router>
+    </ErrorBoundary>
   )
 }
 
