@@ -3,7 +3,7 @@
 ## Clone Repository
 
 ```bash
-git clone [[https://github.com/pixeluga/CardsApp](https://github.com/pixeluga/react-ts-vite-node-koa-yarn-workspaces.git)](https://github.com/pixeluga/react-ts-vite-node-koa-yarn-workspaces.git)
+git clone https://github.com/TarasGez/react-ts-vite-node-koa-yarn-workspaces.git
 cd react-ts-vite-node-koa-yarn-workspaces
 ```
 
@@ -20,6 +20,14 @@ yarn start
 ```
 
 This will start a development server for you.
+
+## Add new packages (Frontend or Backend)
+
+```bash
+yarn workspace server add awesome-package
+```
+
+This will add `awesome-package` to the `server` dependencies.
 
 ## Eslint & Prettier
 
